@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="authorization">Авторизация</string>
+    <string name="nickname">Никнейм</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="create_account">Создать аккаунт</string>
+    <string name="login_via">Войти через</string>
+</resources>
