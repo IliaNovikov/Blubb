@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dark_theme_label_style">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="dark_theme_regular_text_style">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="dark_theme_sub_text_style">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/sub_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="dark_theme_main_button_style">
+        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="dark_theme_main_edittext_style">
+        <item name="android:backgroundTint">@color/main_text</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:textColorHint">@color/sub_text</item>
+    </style>
+</resources>

@@ -6,4 +6,9 @@
     <string name="login">Войти</string>
     <string name="create_account">Создать аккаунт</string>
     <string name="login_via">Войти через</string>
+    <string name="profile">Профиль</string>
+    <string name="online">Онлайн</string>
+    <string name="add_friend">Добавить в друзья</string>
+    <string name="write">Написать</string>
+    <string name="report">Оставить жалобу</string>
 </resources>

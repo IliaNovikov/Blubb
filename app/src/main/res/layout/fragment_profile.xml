@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="@color/light_tint">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_tint">
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/blubb_close_icon"
+                android:tint="@color/main_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:
+                android:fontFamily="@font/inter_semibold"
+                android:hyphenationFrequency="none"
+                android:paddingVertical="4dp"
+                android:text="@string/profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/main_text"
+                android:textSize="24sp" />
+        </Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@color/main_text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/dark_theme_label_style"
+                android:text="@string/app_name"
+                android:layout_marginTop="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/dark_theme_sub_text_style"
+                android:text="@string/online"
+                android:layout_marginTop="8dp"/>
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/dark_theme_main_button_style"
+                android:text="@string/add_friend"
+                android:layout_marginTop="18dp"/>
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/dark_theme_main_button_style"
+                android:text="@string/write"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@color/additional_accent"/>
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/dark_theme_main_button_style"
+                android:text="@string/report"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@color/error"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
