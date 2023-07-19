@@ -8,4 +8,5 @@
     <color name="error">#CE5252</color>
     <color name="main_text">#FFFFFF</color>
     <color name="sub_text">#a9a9a9</color>
+    <color name="additional_accent">#6B07BA</color>
 </resources>

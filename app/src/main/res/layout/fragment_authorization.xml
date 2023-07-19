@@ -18,63 +18,52 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:text="@string/authorization"
-            android:textColor="@color/main_text"
-            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/dark_theme_label_style" />
 
         <TextView
             android:id="@+id/textViewAuthorization2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:text="@string/authorization"
-            android:textColor="@color/main_text"
-            android:textSize="14sp"
+            android:text="@string/login_via"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonCreateAccount" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonCreateAccount"
+            style="@style/dark_theme_regular_text_style" />
 
         <EditText
             android:id="@+id/editTextNickname"
+            style="@style/dark_theme_main_edittext_style"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:backgroundTint="@color/main_text"
-            android:ems="10"
             android:hint="@string/nickname"
             android:inputType="text"
-            android:paddingLeft="16dp"
-            android:textColor="@color/main_text"
-            android:textColorHint="@color/sub_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewAuthorization" />
 
         <EditText
             android:id="@+id/editTextPassword"
+            style="@style/dark_theme_main_edittext_style"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:backgroundTint="@color/main_text"
-            android:ems="10"
             android:hint="@string/password"
-            android:inputType="text"
-            android:paddingLeft="16dp"
-            android:textColor="@color/main_text"
-            android:textColorHint="@color/sub_text"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNickname" />
 
         <Button
             android:id="@+id/buttonLogin"
+            style="@style/dark_theme_main_button_style"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:backgroundTint="@color/accent"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="@string/login"
@@ -84,10 +73,10 @@
 
         <Button
             android:id="@+id/buttonCreateAccount"
+            style="@style/dark_theme_main_button_style"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:backgroundTint="@color/accent"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:text="@string/create_account"

@@ -7,4 +7,11 @@
     <string name="create_account">Create account</string>
     <string name="login_via">Log in via</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="online">Online</string>
+    <string name="add_friend">Add friend</string>
+    <string name="write">Write</string>
+    <string name="report">Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
