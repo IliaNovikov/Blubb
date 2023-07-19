@@ -11,4 +11,8 @@
     <string name="add_friend">Добавить в друзья</string>
     <string name="write">Написать</string>
     <string name="report">Оставить жалобу</string>
+    <string name="account_creation">Создание аккаунта</string>
+    <string name="email">Эл. почта</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="passwords_dont_match">Пароли не совпадают</string>
 </resources>

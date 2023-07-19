@@ -13,5 +13,9 @@
     <string name="add_friend">Add friend</string>
     <string name="write">Write</string>
     <string name="report">Report</string>
+    <string name="account_creation">Account creation</string>
+    <string name="email">Email</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="passwords_dont_match">Passwords don\'t match</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
