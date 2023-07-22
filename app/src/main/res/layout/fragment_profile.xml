@@ -18,7 +18,7 @@
             android:background="@color/dark_tint">
 
             <ImageButton
-                android:id="@+id/buttonBack"
+                android:id="@+id/buttonBackProfile"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@null"

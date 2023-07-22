@@ -15,4 +15,18 @@
     <string name="email">Эл. почта</string>
     <string name="repeat_password">Повторите пароль</string>
     <string name="passwords_dont_match">Пароли не совпадают</string>
+    <string name="settings">Настройки</string>
+    <string name="change_image">Изменить изображение</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="delete_account">Удалить аккаунт</string>
+    <string name="log_out">Выйти из аккаунта</string>
+    <string name="other">Другие</string>
+    <string name="language">Язык</string>
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+    <string name="theme">Тема</string>
+    <string name="dark">Темная</string>
+    <string name="light">Светлая</string>
+    <string name="friends">Друзья</string>
+    <string name="total">Всего</string>
 </resources>
