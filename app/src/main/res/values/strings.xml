@@ -31,5 +31,9 @@
     <string name="light">Light</string>
     <string name="friends">Friends</string>
     <string name="total">Total</string>
+    <string name="delete_friend_question">Are you sure you want to delete this friend?</string>
+    <string name="delete_account_question">Are you sure you want to delete this account?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

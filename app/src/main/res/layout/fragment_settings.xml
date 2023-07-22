@@ -132,7 +132,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="24dp"
                         android:backgroundTint="@color/light_tint"
-
                         android:text="@string/log_out"
                         app:strokeColor="@color/error"
                         app:strokeWidth="2dp" />
