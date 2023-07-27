@@ -27,14 +27,15 @@
         android:layout_marginLeft="32dp"/>
 
     <ImageButton
+        android:id="@+id/imageButtonDeleteFriend"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:background="@null"
+        android:scaleType="fitXY"
         android:src="@drawable/blubb_delete_icon"
-        app:tint="@color/error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="fitXY"/>
+        app:tint="@color/error" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
