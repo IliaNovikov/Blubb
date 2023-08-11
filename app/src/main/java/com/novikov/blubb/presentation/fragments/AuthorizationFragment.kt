@@ -1,4 +1,4 @@
-package com.novikov.blubb
+package com.novikov.blubb.presentation.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -6,14 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.databinding.FragmentAuthorizationBinding
-
 
 class AuthorizationFragment : Fragment() {
 
@@ -26,7 +21,7 @@ class AuthorizationFragment : Fragment() {
         binding = FragmentAuthorizationBinding.inflate(layoutInflater)
 
 
-        Log.e("Error","Hfd,jnftn")
+        Log.e("Error", "Hfd,jnftn")
         val database = Firebase.database
         val myRef = database.getReference("Вадим")
 

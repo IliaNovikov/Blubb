@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_tint"
-    tools:context=".CreateAccountFragment">
+    tools:context=".presentation.fragments.CreateAccountFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
