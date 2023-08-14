@@ -34,4 +34,5 @@
     <string name="cancel">Отмена</string>
     <string name="yes">Да</string>
     <string name="authorization_error">Неверный логин или пароль</string>
+    <string name="сommunication">Общение</string>
 </resources>

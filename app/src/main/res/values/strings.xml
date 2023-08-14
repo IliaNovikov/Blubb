@@ -36,5 +36,5 @@
     <string name="cancel">Cancel</string>
     <string name="yes">Yes</string>
     <string name="authorization_error">Wrong login or password</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="сommunication">Сommunication</string>
 </resources>
