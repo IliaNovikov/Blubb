@@ -45,9 +45,6 @@ class AuthorizationFragment : Fragment() {
                 ).show()
             }
         }
-
-
-
         return binding.root
     }
 
