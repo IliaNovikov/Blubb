@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.novikov.blubb.ChatsFragment
-import com.novikov.blubb.ServersFragment
+import com.novikov.blubb.presentation.fragments.ChatsFragment
+import com.novikov.blubb.presentation.fragments.ServersFragment
 
 class MainFragmentTabsAdapter(
     fragmentManager: FragmentManager,

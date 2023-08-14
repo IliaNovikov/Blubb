@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "484655999084",
+    "firebase_url": "https://blubb-1ea40-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "blubb-1ea40",
+    "storage_bucket": "blubb-1ea40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484655999084:android:5cb796399373edd0089049",
+        "android_client_info": {
+          "package_name": "com.novikov.blubb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484655999084-ap59uh4a5hturu3eggrhqou7qrqtoq0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcyJ7Hkx3IcYLxaxmWJnlhGxkPLGKW2G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484655999084-ap59uh4a5hturu3eggrhqou7qrqtoq0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

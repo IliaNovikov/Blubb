@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/authorizationFragment">
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.novikov.blubb.MainFragment"
+        android:name="com.novikov.blubb.presentation.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.novikov.blubb.presentation.fragments.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" />
 </navigation>
