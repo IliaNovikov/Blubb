@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -28,26 +30,35 @@ class AuthorizationFragment : Fragment() {
         binding = FragmentAuthorizationBinding.inflate(layoutInflater)
         auth = Firebase.auth
 
-        binding.buttonLogin.setOnClickListener {view ->
+        binding.buttonLogin.setOnClickListener { view ->
 
             val login = binding.editTextNickname.text.toString()
             val password = binding.editTextPassword.text.toString()
 
             auth.signInWithEmailAndPassword(login, password).addOnCompleteListener {
-            if (it.isSuccessful) {
-                Snackbar.make(
-                    view,
-                  "Вы вошли в аккаунт",
-                    Snackbar.LENGTH_SHORT
-                ).show()
-            } else {
-                Snackbar.make(
-                  view,
-                    resources.getText(R.string.authorization_error),
-                    Snackbar.LENGTH_SHORT
-                ).show()
+                if (it.isSuccessful) {
+                    Snackbar.make(
+                        view,
+                        "Вы вошли в аккаунт",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                    requireActivity()
+                        .findNavController(R.id.nav_host_fragment)
+                        .navigate(R.id.action_authorizationFragment_to_mainFragment)
+                } else {
+                    Snackbar.make(
+                        view,
+                        resources.getText(R.string.authorization_error),
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
+
+        binding.buttonCreateAccount.setOnClickListener {
+            requireActivity()
+                .findNavController(R.id.nav_host_fragment)
+                .navigate(R.id.action_authorizationFragment_to_createAccountFragment)
         }
 
         return binding.root
