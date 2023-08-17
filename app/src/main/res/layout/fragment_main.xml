@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainFragment">
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_tint"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/light_tint">
 
         <Toolbar
             android:layout_width="match_parent"
@@ -19,40 +18,42 @@
             android:background="@color/dark_tint">
 
 
-            <ImageButton
-                android:id="@+id/buttonSettings"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="start"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/blubb_settings_icon"
-                app:tint="@color/main_text" />
 
-            <TextView
-                android:id="@+id/textViewCommunicationTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/inter_semibold"
-                android:gravity="center"
-                android:hyphenationFrequency="none"
-                android:paddingVertical="4dp"
-                android:text="@string/сommunication"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/main_text"
-                android:textSize="24sp" />
+                <ImageButton
+                    android:id="@+id/buttonSettings"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blubb_settings_icon"
+                    app:tint="@color/main_text"
+                    android:layout_gravity="start"/>
 
-            <ImageButton
-                android:id="@+id/buttonFriends"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_marginEnd="13dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/blubb_friends_icon"
-                app:tint="@color/main_text" />
+                <TextView
+                    android:id="@+id/textViewCommunicationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_semibold"
+                    android:hyphenationFrequency="none"
+                    android:paddingVertical="4dp"
+                    android:text="@string/сommunication"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/main_text"
+                    android:textSize="24sp"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/buttonFriends"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blubb_friends_icon"
+                    app:tint="@color/main_text"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="13dp"/>
+
 
 
         </Toolbar>
@@ -64,8 +65,8 @@
 
             android:background="@color/light_tint"
             app:tabIndicatorColor="@color/accent"
-            app:tabSelectedTextColor="@color/accent"
-            app:tabTextColor="@color/main_text" />
+            app:tabTextColor="@color/main_text"
+            app:tabSelectedTextColor="@color/accent"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
