@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
+import com.novikov.blubb.R
 import com.novikov.blubb.adapters.MainFragmentTabsAdapter
 import com.novikov.blubb.databinding.FragmentMainBinding
 
@@ -51,14 +53,25 @@ class MainFragment : Fragment() {
             }
         })
 
-
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position))
             }
         })
+
+        binding.buttonSettings?.setOnClickListener {
+            requireActivity()
+                .findNavController(R.id.nav_host_fragment)
+                .navigate(R.id.action_mainFragment_to_settingsFragment)
+        }
+        binding.buttonFriends?.setOnClickListener {
+            requireActivity()
+                .findNavController(R.id.nav_host_fragment)
+                .navigate(R.id.action_mainFragment_to_friendsFragment)
+        }
     }
+
 
 
 }
