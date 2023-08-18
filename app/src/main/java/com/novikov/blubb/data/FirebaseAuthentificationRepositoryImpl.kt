@@ -17,7 +17,12 @@ class FirebaseAuthentificationRepositoryImpl():FirebaseAuthentificationRepositor
 //            isLogin = it.isSuccessful
 //        }
 
-        isLogin = auth.signInWithEmailAndPassword(email, password).await().user != null
+        try{
+            isLogin = auth.signInWithEmailAndPassword(email, password).await().user != null
+        }
+        catch (ex:Exception){
+            isLogin = false
+        }
 
         Log.i("authrepo", isLogin.toString())
         return isLogin
