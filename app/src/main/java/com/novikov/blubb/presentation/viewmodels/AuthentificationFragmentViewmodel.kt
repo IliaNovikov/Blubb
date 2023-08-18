@@ -1,5 +1,6 @@
 package com.novikov.blubb.presentation.viewmodels
 
+import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.MutableLiveData
@@ -22,7 +23,8 @@ class AuthentificationFragmentViewmodel @Inject constructor(
     var isLoginLiveData: MutableLiveData<Boolean> = MutableLiveData()
 
     suspend fun authentification(email: String, password: String){
-       isLoginLiveData.value =  authentificationUseCase.execute(email, password)
+       isLoginLiveData.value = authentificationUseCase.execute(email, password)
+        Log.i("authvm", isLoginLiveData.value.toString())
 
      //       TODO: Сделать во вьюмодели метод который возвращает состояние пользователя
 //        auth = Firebase.auth
