@@ -18,8 +18,11 @@ import javax.inject.Inject
 class AuthentificationFragmentViewmodel @Inject constructor(
     private val authentificationUseCase: AuthentificationUseCase
 ) : ViewModel() {
+
+    var isLoginLiveData: MutableLiveData<Boolean> = MutableLiveData()
+
     suspend fun authentification(email: String, password: String){
-        authentificationUseCase.execute(email, password)
+       isLoginLiveData.value =  authentificationUseCase.execute(email, password)
 
      //       TODO: Сделать во вьюмодели метод который возвращает состояние пользователя
 //        auth = Firebase.auth

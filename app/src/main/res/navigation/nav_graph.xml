@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/authorizationFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/userChatFragment"
-        android:name="com.novikov.blubb.UserChatFragment"
+        android:name="com.novikov.blubb.presentation.fragments.UserChatFragment"
         android:label="fragment_user_chat"
         tools:layout="@layout/fragment_user_chat" >
         <action

@@ -6,14 +6,14 @@ import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.domain.repositories.FirebaseAuthentificationRepository
 
 class FirebaseAuthentificationRepositoryImpl():FirebaseAuthentificationRepository {
-    override suspend fun authentification(email: String, password: String) {
+    override suspend fun authentification(email: String, password: String): Boolean {
         val auth = Firebase.auth
+        var isLogin = false
+
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-            if (it.isSuccessful) {
-                Log.d("AUTHENTIFICATION","Вы вошли в аккаунт")
-            } else {
-                Log.d("AUTHENTIFICATION","Неверный логин или пароль")
-            }
+            isLogin = it.isSuccessful
+            Log.i("auth", it.isSuccessful.toString())
         }
+        return isLogin
     }
 }
