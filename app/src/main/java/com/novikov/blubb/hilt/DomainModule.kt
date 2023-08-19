@@ -2,7 +2,9 @@ package com.novikov.blubb.hilt
 
 import androidx.transition.Visibility.Mode
 import com.novikov.blubb.domain.repositories.FirebaseAuthentificationRepository
+import com.novikov.blubb.domain.repositories.UserRepository
 import com.novikov.blubb.domain.usecases.AuthentificationUseCase
+import com.novikov.blubb.domain.usecases.SaveUserUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,4 +19,8 @@ class DomainModule {
         return AuthentificationUseCase(firebaseAuthentificationRepository)
     }
 
+    @Provides
+    fun provideSaveUserUseCase(userRepository: UserRepository) : SaveUserUseCase{
+        return SaveUserUseCase(userRepository)
+    }
 }
