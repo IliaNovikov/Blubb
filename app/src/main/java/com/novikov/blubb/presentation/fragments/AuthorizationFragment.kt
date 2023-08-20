@@ -1,10 +1,14 @@
 package com.novikov.blubb.presentation.fragments
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
@@ -16,6 +20,7 @@ import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.collection.LLRBNode.Color
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.R
@@ -30,6 +35,7 @@ class AuthorizationFragment : Fragment() {
     private val viewModel: AuthentificationFragmentViewmodel by viewModels()
 
 
+    @SuppressLint("RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,8 +46,22 @@ class AuthorizationFragment : Fragment() {
             val email = binding.editTextNickname.text.toString()
             val password = binding.editTextPassword.text.toString()
 
+            var loadingDialog = AlertDialog.Builder(requireContext(),
+                androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog)
+                .apply {
+                setView(R.layout.dialog_loading)
+            }.create()
+
+            loadingDialog.window?.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
+
+            loadingDialog.show()
+
+
+
             lifecycleScope.launch {
                 viewModel.authentification(email, password)
+            }.invokeOnCompletion {
+                loadingDialog.dismiss()
             }
 
         }

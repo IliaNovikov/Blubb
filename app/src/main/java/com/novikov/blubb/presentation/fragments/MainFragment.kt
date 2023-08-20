@@ -11,7 +11,9 @@ import com.google.android.material.tabs.TabLayout
 import com.novikov.blubb.R
 import com.novikov.blubb.adapters.MainFragmentTabsAdapter
 import com.novikov.blubb.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
