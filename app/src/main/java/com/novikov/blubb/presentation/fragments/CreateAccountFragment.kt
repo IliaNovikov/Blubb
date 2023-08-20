@@ -47,20 +47,6 @@ class CreateAccountFragment : Fragment() {
         binding.buttonCreateAccountCreate.setOnClickListener { view ->
 
               if (checkFields()) {
-//                val email = binding.editTextCreateAccountEmail.text.toString()
-//                val password = binding.editTextCreateAccountPassword.text.toString()
-//                auth.createUserWithEmailAndPassword(email, password)
-//                    .addOnCompleteListener(requireActivity()) {
-//                        if (it.isSuccessful) {
-//                            Snackbar.make(view, "Successful", Snackbar.LENGTH_SHORT).show()
-//                            requireActivity()
-//                                .findNavController(R.id.nav_host_fragment)
-//                                .navigate(R.id.action_createAccountFragment_to_mainFragment)
-//                        } else {
-//                            Snackbar.make(view, "Unknown error", Snackbar.LENGTH_SHORT).show()
-//                        }
-//                    }
-
                   var loadingDialog = AlertDialog.Builder(requireContext(),
                       androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog)
                       .apply {
