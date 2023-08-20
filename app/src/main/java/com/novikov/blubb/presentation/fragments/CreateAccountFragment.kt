@@ -61,7 +61,9 @@ class CreateAccountFragment : Fragment() {
 //                        }
 //                    }
 
-                  var loadingDialog = AlertDialog.Builder(requireContext(), androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog).apply {
+                  var loadingDialog = AlertDialog.Builder(requireContext(),
+                      androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog)
+                      .apply {
                       setView(R.layout.dialog_loading)
                   }.create()
 
