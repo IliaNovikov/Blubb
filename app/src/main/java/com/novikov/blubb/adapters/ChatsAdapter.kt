@@ -10,11 +10,10 @@ import com.novikov.blubb.domain.models.Chat
 
 class ChatsAdapter(
     private val context: Context,
-    val listener: OnRecyclerViewItemClickListener? = null
+    val listener: OnChatsRecyclerViewItemClickListener? = null
 ) : RecyclerView.Adapter<ChatsAdapter.ChatViewHolder>() {
 
     var data: List<Chat?> = emptyList()
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -30,7 +29,19 @@ class ChatsAdapter(
 
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
-        val book: Chat? = data[position]
+        val chat: Chat? = data[position]
+
+        with(holder.binding){
+            textViewChatName.text = chat!!.user2.nickname
+
+            chatItemLayout.setOnClickListener {
+                if(listener != null){
+                    listener.onItemClick(position)
+                }
+            }
+
+        }
+
     }
 
 
@@ -39,6 +50,6 @@ class ChatsAdapter(
 }
 
 
-interface OnRecyclerViewItemClickListener {
+interface OnChatsRecyclerViewItemClickListener {
     fun onItemClick(position: Int)
 }
