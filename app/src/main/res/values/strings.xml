@@ -37,4 +37,7 @@
     <string name="yes">Yes</string>
     <string name="authorization_error">Wrong login or password</string>
     <string name="сommunication">Сommunication</string>
+    <string name="your_id">Your ID</string>
+    <string name="search_friends">Search friends</string>
+    <string name="id_or_nickname">ID or nickname</string>
 </resources>

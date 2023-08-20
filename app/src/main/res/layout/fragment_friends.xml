@@ -38,6 +38,18 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/main_text"
             android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/buttonAddFriends"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_friend_icon"
+            app:tint="@color/main_text"
+            android:layout_gravity="end"
+            android:layout_marginEnd="13dp"/>
+
     </Toolbar>
 
         <TextView

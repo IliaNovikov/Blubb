@@ -62,6 +62,15 @@
                         android:layout_marginTop="16dp"
                         android:text="@string/profile" />
 
+                    <TextView
+                        android:id="@+id/textViewYourID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_id"
+                        style="@style/dark_theme_sub_text_style"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="16dp"/>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

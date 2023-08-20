@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_friendsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_friendsFragment_to_searchUsersFragment"
+            app:destination="@id/searchUsersFragment" />
     </fragment>
     <fragment
         android:id="@+id/userChatFragment"
@@ -72,4 +75,9 @@
         android:name="com.novikov.blubb.presentation.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchUsersFragment"
+        android:name="com.novikov.blubb.presentation.fragments.SearchUsersFragment"
+        android:label="fragment_search_users"
+        tools:layout="@layout/fragment_search_users" />
 </navigation>
