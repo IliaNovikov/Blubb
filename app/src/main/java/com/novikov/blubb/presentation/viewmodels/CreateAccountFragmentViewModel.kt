@@ -22,10 +22,13 @@ class CreateAccountFragmentViewModel @Inject constructor(
     private val app: Application
 ) : AndroidViewModel(app) {
 
-    public var emailLiveData: MutableLiveData<String> = MutableLiveData()
-    public var nicknameLiveData: MutableLiveData<String> = MutableLiveData()
-    public var passwordLiveData: MutableLiveData<String> = MutableLiveData()
-    public var confirmPasswordLiveData: MutableLiveData<String> = MutableLiveData()
+    var emailLiveData: MutableLiveData<String> = MutableLiveData()
+    var nicknameLiveData: MutableLiveData<String> = MutableLiveData()
+    var passwordLiveData: MutableLiveData<String> = MutableLiveData()
+
+    var isCorrect : MutableLiveData<Boolean> = MutableLiveData()
+
+
 
     suspend fun saveUser(){
         var user = User(nickname = nicknameLiveData.value.toString(),

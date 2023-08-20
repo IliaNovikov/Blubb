@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -38,7 +39,8 @@ class CreateAccountFragment : Fragment() {
         auth = Firebase.auth
 
         binding.buttonCreateAccountCreate.setOnClickListener { view ->
-            if (checkFields()) {
+
+              if (checkFields()) {
 //                val email = binding.editTextCreateAccountEmail.text.toString()
 //                val password = binding.editTextCreateAccountPassword.text.toString()
 //                auth.createUserWithEmailAndPassword(email, password)
@@ -52,14 +54,17 @@ class CreateAccountFragment : Fragment() {
 //                            Snackbar.make(view, "Unknown error", Snackbar.LENGTH_SHORT).show()
 //                        }
 //                    }
-                viewModel.emailLiveData.value = binding.editTextCreateAccountEmail.text.toString()
-                viewModel.nicknameLiveData.value = binding.editTextCreateAccountNickname.text.toString()
-                viewModel.passwordLiveData.value = binding.editTextCreateAccountPassword.text.toString()
 
-                lifecycleScope.launch {
-                    viewModel.saveUser()
-                }
-            }
+                  viewModel.emailLiveData.value = binding.editTextCreateAccountEmail.text.toString()
+                  viewModel.nicknameLiveData.value =
+                      binding.editTextCreateAccountNickname.text.toString()
+                  viewModel.passwordLiveData.value =
+                      binding.editTextCreateAccountPassword.text.toString()
+
+                  lifecycleScope.launch {
+                      viewModel.saveUser()
+                  }
+              }
         }
 
         binding.buttonCreateAccountAuthorization.setOnClickListener {

@@ -24,8 +24,6 @@ class UserRepositoryImpl(): UserRepository {
         user.id = auth.currentUser?.uid.toString()
 
         database.child("users").child(user.id).child("nickname").setValue(user.nickname)
-        database.child("users").child(user.id).child("email").setValue(user.email)
-        database.child("users").child(user.id).child("password").setValue(user.password)
         database.child("users").child(user.id).child("avatar").setValue(user.userImage.toString())
     }
 }
