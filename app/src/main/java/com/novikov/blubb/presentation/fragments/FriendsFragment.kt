@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.novikov.blubb.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FriendsFragment : Fragment() {
 
     override fun onCreateView(

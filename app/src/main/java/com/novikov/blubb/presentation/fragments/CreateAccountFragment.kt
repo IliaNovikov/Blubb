@@ -63,6 +63,10 @@ class CreateAccountFragment : Fragment() {
 
                   lifecycleScope.launch {
                       viewModel.saveUser()
+                  }.invokeOnCompletion {
+                      requireActivity()
+                          .findNavController(R.id.nav_host_fragment)
+                          .navigate(R.id.action_createAccountFragment_to_mainFragment)
                   }
               }
         }
