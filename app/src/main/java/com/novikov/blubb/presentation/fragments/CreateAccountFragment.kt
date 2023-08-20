@@ -1,10 +1,15 @@
 package com.novikov.blubb.presentation.fragments
 
+import android.app.AlertDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -16,6 +21,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.R
 import com.novikov.blubb.databinding.FragmentCreateAccountBinding
+import com.novikov.blubb.presentation.dialogs.LoadingDialog
 import com.novikov.blubb.presentation.viewmodels.CreateAccountFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -55,6 +61,14 @@ class CreateAccountFragment : Fragment() {
 //                        }
 //                    }
 
+                  var loadingDialog = AlertDialog.Builder(requireContext(), androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog).apply {
+                      setView(R.layout.dialog_loading)
+                  }.create()
+
+                  loadingDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+                  loadingDialog.show()
+
                   viewModel.emailLiveData.value = binding.editTextCreateAccountEmail.text.toString()
                   viewModel.nicknameLiveData.value =
                       binding.editTextCreateAccountNickname.text.toString()
@@ -64,6 +78,9 @@ class CreateAccountFragment : Fragment() {
                   lifecycleScope.launch {
                       viewModel.saveUser()
                   }.invokeOnCompletion {
+
+                      loadingDialog.dismiss()
+
                       requireActivity()
                           .findNavController(R.id.nav_host_fragment)
                           .navigate(R.id.action_createAccountFragment_to_mainFragment)
