@@ -82,7 +82,7 @@
                             android:layout_height="72dp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="72dp"
-                            android:src="@color/main_text" />
+                            android:src="@drawable/blubb_default_avatar" />
 
                         <Button
                             android:id="@+id/buttonChangeImage"
