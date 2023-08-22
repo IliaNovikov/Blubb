@@ -35,9 +35,7 @@ class ChatsAdapter(
             textViewChatName.text = chat!!.user2.nickname
 
             chatItemLayout.setOnClickListener {
-                if(listener != null){
-                    listener.onItemClick(position)
-                }
+                listener?.onItemClick(position)
             }
 
         }

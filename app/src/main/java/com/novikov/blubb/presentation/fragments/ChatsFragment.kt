@@ -1,6 +1,7 @@
 package com.novikov.blubb.presentation.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +32,7 @@ OnChatsRecyclerViewItemClickListener{
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        adapter = ChatsAdapter(requireContext())
+        adapter = ChatsAdapter(requireContext(), this)
 
         binding.recyclerViewChats.adapter = adapter
         val testSender = User("6SlTh9TC2fgyMC9NePsmQZbBBbm1",
@@ -51,11 +52,12 @@ OnChatsRecyclerViewItemClickListener{
     }
 
     override fun onItemClick(position: Int) {
+        Log.i("rjtjty",position.toString())
+        val action = MainFragmentDirections.actionMainFragmentToUserChatFragment(adapter.data[position]!!)
+
         requireActivity().
-                findNavController(R.id.nav_host_fragment)
-            .navigate(R.id.action_mainFragment_to_userChatFragment)
-
-
+                findNavController(R.id.nav_host_fragment).
+                navigate(action)
         // TODO: сделать аргумет chat при навигации
         // TODO: как-то убрать сообщения из класса чата
         // TODO: user1 всегда текущий юзер
