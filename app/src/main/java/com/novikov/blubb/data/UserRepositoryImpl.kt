@@ -19,7 +19,7 @@ class UserRepositoryImpl(): UserRepository {
         val database = Firebase.database.reference
         val auth = Firebase.auth
 
-        auth.createUserWithEmailAndPassword(user.email, user.password).await()
+        auth.createUserWithEmailAndPassword(user.email, user.password!!).await()
 
         user.id = auth.currentUser?.uid.toString()
 
