@@ -34,13 +34,14 @@ class AuthorizationFragment : Fragment() {
     private lateinit var binding: FragmentAuthorizationBinding
     private val viewModel: AuthentificationFragmentViewmodel by viewModels()
 
-
     @SuppressLint("RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAuthorizationBinding.inflate(layoutInflater)
+
+        Log.i("user uid", FirebaseAuth.getInstance().currentUser?.uid.toString())
 
         binding.buttonLogin.setOnClickListener { view ->
             val email = binding.editTextNickname.text.toString()
@@ -55,8 +56,6 @@ class AuthorizationFragment : Fragment() {
             loadingDialog.window?.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
 
             loadingDialog.show()
-
-
 
             lifecycleScope.launch {
                 viewModel.authentification(email, password)
