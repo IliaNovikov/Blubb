@@ -17,8 +17,6 @@
             android:layout_height="wrap_content"
             android:background="@color/dark_tint">
 
-
-
                 <ImageButton
                     android:id="@+id/buttonSettings"
                     android:layout_width="24dp"
@@ -54,15 +52,12 @@
                     android:layout_gravity="end"
                     android:layout_marginEnd="13dp"/>
 
-
-
         </Toolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="@color/light_tint"
             app:tabIndicatorColor="@color/accent"
             app:tabTextColor="@color/main_text"

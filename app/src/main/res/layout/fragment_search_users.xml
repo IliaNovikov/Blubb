@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.fragments.MainFragment">
+    android:background="@color/light_tint"
+    tools:context=".presentation.fragments.SearchUsersFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/light_tint">
+        android:orientation="vertical">
 
         <Toolbar
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_height="24dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/blubb_settings_icon"
+                android:src="@drawable/blubb_close_icon"
                 app:tint="@color/main_text"
                 android:layout_gravity="start"/>
 
@@ -35,41 +35,30 @@
                 android:fontFamily="@font/inter_semibold"
                 android:hyphenationFrequency="none"
                 android:paddingVertical="4dp"
-                android:text="@string/сommunication"
+                android:text="@string/search_friends"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/main_text"
                 android:textSize="24sp"
                 android:gravity="center"/>
 
-            <ImageButton
-                android:id="@+id/buttonFriends"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/blubb_friends_icon"
-                app:tint="@color/main_text"
-                android:layout_gravity="end"
-                android:layout_marginEnd="13dp"/>
-
         </Toolbar>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
+        <androidx.appcompat.widget.SearchView
+            style="@style/dark_theme_main_edittext_style"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:tabIndicatorAnimationMode="elastic"
-            android:background="@color/light_tint"
-            app:tabIndicatorColor="@color/accent"
-            app:tabTextColor="@color/main_text"
-            app:tabSelectedTextColor="@color/accent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/dialog_loading_background"
+            android:backgroundTint="@color/dark_tint"
+            android:foregroundTint="@color/white"
             />
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"/>
+
     </LinearLayout>
 
 </FrameLayout>
