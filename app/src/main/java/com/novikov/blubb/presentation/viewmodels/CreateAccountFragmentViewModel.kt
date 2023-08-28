@@ -1,15 +1,9 @@
 package com.novikov.blubb.presentation.viewmodels
 
 import android.app.Application
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.drawable.Drawable
-import android.provider.MediaStore.Images
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.navigation.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.novikov.blubb.R
 import com.novikov.blubb.domain.models.User
 import com.novikov.blubb.domain.usecases.SaveUserUseCase
@@ -31,7 +25,8 @@ class CreateAccountFragmentViewModel @Inject constructor(
 
 
     suspend fun saveUser(){
-        var user = User(nickname = nicknameLiveData.value.toString(),
+        var user = User(
+            nickname = nicknameLiveData.value.toString(),
             password = passwordLiveData.value.toString(),
             email = emailLiveData.value.toString(),
             id = "0",

@@ -4,6 +4,7 @@ import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.snapshots
 import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.R
 import com.novikov.blubb.domain.models.User
@@ -12,7 +13,7 @@ import kotlinx.coroutines.tasks.await
 
 class UserRepositoryImpl(): UserRepository {
     override suspend fun getUser(): User {
-        TODO("djew")
+        TODO("get user from firebase")
     }
 
     override suspend fun saveUser(user: User) {
