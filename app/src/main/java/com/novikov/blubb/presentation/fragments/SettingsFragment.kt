@@ -21,6 +21,7 @@ import com.google.firebase.ktx.Firebase
 import com.novikov.blubb.R
 import com.novikov.blubb.databinding.FragmentSettingsBinding
 import com.novikov.blubb.domain.models.User
+import com.novikov.blubb.presentation.dialogs.LogOutDialog
 import com.novikov.blubb.presentation.viewmodels.SettingsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -70,6 +71,11 @@ class SettingsFragment : Fragment() {
         binding.radioEnglishLanguage.setOnCheckedChangeListener { button, isChecked ->
             if (isChecked)
                 setLocale("en", "EN")
+        }
+
+        binding.buttonLogOut.setOnClickListener {
+            val dialog = LogOutDialog()
+            dialog.show(childFragmentManager, "LogOutDialog")
         }
     }
 

@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonDeleteFriendCancel"
+        android:id="@+id/buttonCancelLogOut"
         style="@style/dark_theme_main_button_style"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/buttonDeleteFriendYes"
+        android:id="@+id/buttonLogOutYes"
         style="@style/dark_theme_main_button_style"
         android:layout_width="128dp"
         android:layout_height="wrap_content"

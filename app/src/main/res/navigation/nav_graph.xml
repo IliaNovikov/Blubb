@@ -48,7 +48,11 @@
         android:id="@+id/settingsFragment"
         android:name="com.novikov.blubb.presentation.fragments.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/friendsFragment"
         android:name="com.novikov.blubb.presentation.fragments.FriendsFragment"
