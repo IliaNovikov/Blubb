@@ -34,7 +34,6 @@ class UserRepositoryImpl(): UserRepository {
 //        }
 
         Log.i("nickname getUser", nickname)
-//        var avatar = Firebase.database.reference.child(uid).child("avatar").get().result.value.toString()
 
         Log.i("uid getUser", uid)
         Log.i("email getUser", email)
