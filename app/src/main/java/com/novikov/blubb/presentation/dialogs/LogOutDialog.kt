@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import com.novikov.blubb.R
 import com.novikov.blubb.databinding.DialogLogOutBinding
 
-class LogOutDialog: DialogFragment() {
+class LogOutDialog(val listener: LogOutDialogCallback): DialogFragment() {
 
     private val binding: DialogLogOutBinding by lazy {
         DialogLogOutBinding.inflate(layoutInflater)
@@ -30,11 +30,11 @@ class LogOutDialog: DialogFragment() {
         }
 
         binding.buttonLogOutYes.setOnClickListener {
-            requireActivity()
-                .findNavController(R.id.nav_host_fragment)
-                .navigate(R.id.authorizationFragment)
+            listener.onLogOutYesListener()
         }
-
     }
+}
 
+interface LogOutDialogCallback{
+    fun onLogOutYesListener()
 }

@@ -27,4 +27,11 @@ class FirebaseAuthentificationRepositoryImpl():FirebaseAuthentificationRepositor
         Log.i("authrepo", isLogin.toString())
         return isLogin
     }
+
+    override suspend fun logOut() {
+        val auth = Firebase.auth
+        auth.signOut()
+    }
+
+
 }

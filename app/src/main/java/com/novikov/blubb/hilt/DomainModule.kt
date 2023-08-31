@@ -5,6 +5,7 @@ import com.novikov.blubb.domain.repositories.FirebaseAuthentificationRepository
 import com.novikov.blubb.domain.repositories.UserRepository
 import com.novikov.blubb.domain.usecases.AuthentificationUseCase
 import com.novikov.blubb.domain.usecases.GetUserUseCase
+import com.novikov.blubb.domain.usecases.LogOutUseCase
 import com.novikov.blubb.domain.usecases.SaveUserUseCase
 import dagger.Module
 import dagger.Provides
@@ -28,5 +29,10 @@ class DomainModule {
     @Provides
     fun provideSaveUserUseCase(userRepository: UserRepository) : SaveUserUseCase{
         return SaveUserUseCase(userRepository)
+    }
+
+    @Provides
+    fun provideLogOutUseCase(firebaseAuthentificationRepository: FirebaseAuthentificationRepository): LogOutUseCase{
+        return LogOutUseCase(firebaseAuthentificationRepository)
     }
 }

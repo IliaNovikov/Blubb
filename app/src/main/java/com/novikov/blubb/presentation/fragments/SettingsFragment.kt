@@ -22,23 +22,26 @@ import com.novikov.blubb.R
 import com.novikov.blubb.databinding.FragmentSettingsBinding
 import com.novikov.blubb.domain.models.User
 import com.novikov.blubb.presentation.dialogs.LogOutDialog
+import com.novikov.blubb.presentation.dialogs.LogOutDialogCallback
 import com.novikov.blubb.presentation.viewmodels.SettingsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.Locale
 
 @AndroidEntryPoint
-class SettingsFragment : Fragment() {
+class SettingsFragment : Fragment(), LogOutDialogCallback {
 
     private lateinit var binding: FragmentSettingsBinding
     private val viewModel: SettingsFragmentViewModel by viewModels()
 
+    private lateinit var logOutListener: LogOutDialogCallback
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSettingsBinding.inflate(layoutInflater)
+        logOutListener = this
 
         setCurrentLocale()
 
@@ -48,9 +51,6 @@ class SettingsFragment : Fragment() {
             viewModel.getUser()
         }
 
-        binding.buttonLogOut.setOnClickListener {
-
-        }
 
         return binding.root
     }
@@ -74,7 +74,7 @@ class SettingsFragment : Fragment() {
         }
 
         binding.buttonLogOut.setOnClickListener {
-            val dialog = LogOutDialog()
+            val dialog = LogOutDialog(logOutListener)
             dialog.show(childFragmentManager, "LogOutDialog")
         }
     }
@@ -98,5 +98,14 @@ class SettingsFragment : Fragment() {
             binding.radioEnglishLanguage.isChecked = true
         if(Locale.getDefault().toLanguageTag().equals("ru-RU"))
             binding.radioRussianLanguage.isChecked = true
+    }
+
+    override fun onLogOutYesListener() {
+        lifecycleScope.launch {
+            viewModel.logOut()
+        }
+        requireActivity().
+        findNavController(R.id.nav_host_fragment).
+        navigate(R.id.authorizationFragment)
     }
 }
