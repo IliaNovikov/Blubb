@@ -206,7 +206,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp">
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp">
 
                         <TextView
                             style="@style/dark_theme_label_style"
@@ -244,6 +245,15 @@
                         </RadioGroup>
 
                     </LinearLayout>
+                    <Button
+                        android:id="@+id/buttonSaveSettings"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/save"
+                        style="@style/dark_theme_main_button_style"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="24dp"
+                        android:paddingHorizontal="56dp"/>
 
                 </LinearLayout>
             </LinearLayout>

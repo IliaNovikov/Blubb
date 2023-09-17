@@ -39,4 +39,5 @@
     <string name="search_friends">Найти друзей</string>
     <string name="id_or_nickname">ID или никнейм</string>
     <string name="log_out_question">Вы точно хотите выйти из аккаунта?</string>
+    <string name="save">Сохранить</string>
 </resources>

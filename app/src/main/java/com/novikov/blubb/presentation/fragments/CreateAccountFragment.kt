@@ -47,7 +47,7 @@ class CreateAccountFragment : Fragment() {
         binding.buttonCreateAccountCreate.setOnClickListener { view ->
 
               if (checkFields()) {
-                  var loadingDialog = AlertDialog.Builder(requireContext(),
+                  val loadingDialog = AlertDialog.Builder(requireContext(),
                       androidx.appcompat.R.style.ThemeOverlay_AppCompat_Dialog)
                       .apply {
                       setView(R.layout.dialog_loading)
@@ -64,7 +64,7 @@ class CreateAccountFragment : Fragment() {
                       binding.editTextCreateAccountPassword.text.toString()
 
                   lifecycleScope.launch {
-                      viewModel.saveUser()
+                      viewModel.createUser()
                   }.invokeOnCompletion {
 
                       loadingDialog.dismiss()
